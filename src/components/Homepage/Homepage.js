@@ -41,6 +41,7 @@ const Homepage = () => {
                                 <Card.Img variant="top" src={category.logo} />
                                 <Card.Body>
                                     <Card.Title>{category.name}</Card.Title>
+                                    <Card.Text> {category.total} Quizes</Card.Text>
                                     <Button variant="primary" onClick={() => handleNavigate(category.id)}>Start Quiz</Button>
                                 </Card.Body>
                             </Card>
