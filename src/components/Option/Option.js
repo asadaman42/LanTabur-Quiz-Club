@@ -3,8 +3,15 @@ import React from 'react';
 const Option = ({option, correctAnswer, key, id}) => {
     const checkAnswerCorrect = (event) => {
 
+        if(event.target.value === correctAnswer){
+            console.log('correct')
+        }
+        else{
+            console.log('incorrct')
+        }
+
         
-        console.log(event.target.value);
+        
 
 
 
