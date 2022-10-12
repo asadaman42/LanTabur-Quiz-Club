@@ -20,7 +20,7 @@ const Question = ({ quiz }) => {
             <Card.Body>
                 <Row className='mb-4'>
                     <Col xs={10} md={11}>
-                        <h6>{question}</h6>
+                        <h6> {question}</h6>
                     </Col>
                     <Col xs={2} md={1} className='my-auto'>
                         <FontAwesomeIcon onClick={notify} icon={faEye} className='me-1'></FontAwesomeIcon>

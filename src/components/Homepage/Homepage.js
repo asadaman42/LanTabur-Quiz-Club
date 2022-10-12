@@ -15,9 +15,24 @@ const Homepage = () => {
     const handleNavigate = (id) => {
         navigate(`quiz/${id}`);
     }
+    const headerURL = 'https://i.ibb.co/jzxLbM3/1.jpg';
 
     return (
         <div>
+            <div className="card m-5">
+                <div className="row g-0">
+                    <div className="col-md-4">                        
+                        <img src={headerURL} className="w-75 rounded-start" alt=""/>
+                    </div>
+                    <div className="col-md-8 my-auto">
+                        <div className="card-body">
+                            <h5 className="card-title">LanTabur Quiz Club </h5>
+                            <p className="card-text">Test your brain by exploring the quiz section of this quiz club. This quiz club includes React, JavaScript, CSS and git quiz store. Let's explore.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
             <Row xs={1} md={2} lg={4} className="g-5 m-5">
                 {
                     data.map(category => (
