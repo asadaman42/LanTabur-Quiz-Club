@@ -6,9 +6,6 @@ import Homepage from './components/Homepage/Homepage';
 import Quiz from './components/Quiz/Quiz';
 import Unhandled from './components/Unhandled/Unhandled';
 
-
-
-
 function App() {
   const router = createBrowserRouter([
     {
