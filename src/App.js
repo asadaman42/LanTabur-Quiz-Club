@@ -1,8 +1,12 @@
+import React from 'react'
 import './App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Main from './layout/Main/Main'
 import Homepage from './components/Homepage/Homepage';
 import Quiz from './components/Quiz/Quiz';
+
+
+
 
 function App() {
   const router = createBrowserRouter([

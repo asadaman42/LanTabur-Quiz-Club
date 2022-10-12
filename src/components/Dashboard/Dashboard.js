@@ -1,12 +1,13 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import Quiz from '../Quiz/Quiz';
 
 const Dashboard = ({category}) => {
     const {id, name, logo, total} = category;
 
     const navigate = useNavigate();
     const handleNavigate = () => {
-        navigate(`quiz/${id}`)
+        navigate(`quiz/${id}`);
     }
 
     return (

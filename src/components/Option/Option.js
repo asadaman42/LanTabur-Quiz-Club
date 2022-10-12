@@ -1,26 +1,23 @@
 import React from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Option = ({option, correctAnswer, key, id}) => {
     const checkAnswerCorrect = (event) => {
-
         if(event.target.value === correctAnswer){
-            console.log('correct')
+            toast("Correct")
         }
         else{
-            console.log('incorrct')
+            toast("Incorrect")
         }
-
-        
-        
-
-
-
     };
     
     return (
         <div>
             <input onClick={checkAnswerCorrect} type="radio" name={correctAnswer} id={key} value={option}/>
-            <label for={key}> {option} </label>            
+            <label for={key}> {option} </label>
+            <ToastContainer />            
         </div>
     );
 };

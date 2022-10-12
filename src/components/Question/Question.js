@@ -1,6 +1,7 @@
 import React from 'react';
 import Option from '../Option/Option';
 
+
 const Question = ({quiz}) => {    
     const {correctAnswer, options, question, id} = quiz;
     return (
