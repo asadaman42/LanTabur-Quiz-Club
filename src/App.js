@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Main from './layout/Main/Main'
 import Homepage from './components/Homepage/Homepage';
 import Quiz from './components/Quiz/Quiz';
+import Unhandled from './components/Unhandled/Unhandled';
 
 
 
@@ -12,7 +13,7 @@ function App() {
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <Main></Main>, 
+      element: <Main></Main>,
       children: [
         {
           path: '/',
@@ -21,24 +22,26 @@ function App() {
         },
         {
           path: '/quiz/:id',
-          loader: async({params}) => {
+          loader: async ({ params }) => {
             return fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`)
           },
           element: <Quiz></Quiz>
-    
+
+        },
+        {
+          path: '/*',
+          element: <Unhandled></Unhandled>
         }
       ]
-    },
-    
-    {
-      path: '/*/', element: <div>This address is unavailable</div>
     }
+
+    
 
   ])
 
   return (
     <div className="App">
-      <RouterProvider router = {router} ></RouterProvider>
+      <RouterProvider router={router} ></RouterProvider>
     </div>
   );
 }
