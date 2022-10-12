@@ -18,7 +18,7 @@ const Homepage = () => {
 
     return (
         <div>
-            <Row xs={1} md={2} lg={4} className="g-5 m-5 p-5">
+            <Row xs={1} md={2} lg={4} className="g-5 m-5">
                 {
                     data.map(category => (
                         <Col>

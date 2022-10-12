@@ -3,21 +3,23 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
-const Option = ({option, correctAnswer, key, id}) => {
+const Option = ({ option, correctAnswer, key, id }) => {
     const checkAnswerCorrect = (event) => {
-        if(event.target.value === correctAnswer){
+        if (event.target.value === correctAnswer) {
             toast("Correct")
         }
-        else{
+        else {
             toast("Incorrect")
         }
     };
-    
+
     return (
-        <div>
-            <input onClick={checkAnswerCorrect} type="radio" name={correctAnswer} id={key} value={option}/>
-            <label for={key}> {option} </label>
-            <ToastContainer />            
+        <div className='my-2'>
+            <div className='d-flex align-items-center'>
+                <input onClick={checkAnswerCorrect} type="radio" name={correctAnswer} id={key} value={option} />
+                <label for={key} className='ms-2 text-start'> {option} </label>
+            </div>
+            <ToastContainer />
         </div>
     );
 };
